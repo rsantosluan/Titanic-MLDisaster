@@ -1,4 +1,3 @@
-from sklearn.model_selection import StratifiedShuffleSplit
 class graph(  ):
     
     ###Values ​​in the bar graph
