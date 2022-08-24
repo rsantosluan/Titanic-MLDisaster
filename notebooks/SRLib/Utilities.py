@@ -3,6 +3,13 @@ import numpy  as np
 import pandas as pd
 from sklearn.preprocessing import OneHotEncoder
 
+#Machine Learning
+from sklearn.linear_model    import RidgeClassifierCV, LogisticRegressionCV, LassoCV
+from sklearn.ensemble        import RandomForestClassifier
+from sklearn.model_selection import cross_validate
+import xgboost as xgb 
+
+
 
 class graph():
     
@@ -42,3 +49,64 @@ class encoding():
 
 
     ###-
+
+class modelSelect():
+    def scorecv(xtr,ytr,xte,yte):
+        #Ramdom Forest
+        rfc = RandomForestClassifier()
+        rfc.fit( xtr, ytr )
+        #Score
+        res    = cross_validate( rfc, xte,yte, cv = 5 )
+        resrf = pd.DataFrame(
+            {'Model Name' : 'Random Forest Classifier',
+            'CV Score'    : res['test_score'].mean()},
+            index = [0]
+        )
+
+        #XGBoost
+        xgbc = xgb.XGBClassifier()
+        xgbc.fit( xtr, ytr )
+        res = cross_validate( xgbc, xte,yte, cv = 5 )
+        resxgb= pd.DataFrame(
+            {'Model Name' : 'XGBoost Classifier',
+            'CV Score'    : res['test_score'].mean()},
+            index = [0]
+        )
+
+        #Ridge Classifier
+        rc    = RidgeClassifierCV()
+        rc.fit( xtr, ytr )
+        res   = rc.score( xte, yte )
+        resrc = pd.DataFrame(
+            {'Model Name' : 'Ridge Classifier',
+            'CV Score'    : res},
+            index = [0]
+        )
+
+        #Logistic Regression
+        lr    = LogisticRegressionCV()
+        lr.fit( xtr, ytr )
+        res   = lr.score( xte, yte )
+        reslr = pd.DataFrame(
+            {'Model Name': 'Logistic Regression',
+            'CV Score'   : res},
+            index = [0]
+        )
+
+        #Lasso
+        lss = LassoCV()
+        lss.fit( xtr, ytr )
+        res = lss.score( xte, yte )
+        reslss = pd.DataFrame(
+            {'Model Name' : 'Lasso',
+            'CV Score'    : res},
+            index = [0]
+        )
+        
+        #Result
+        result = pd.concat( [resrf,resrc, reslr, reslss, resxgb] )
+        result.sort_values( 'CV Score', ascending = False, inplace = True )
+        result.reset_index( drop = True, inplace = True )
+
+
+        return result
