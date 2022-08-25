@@ -10,7 +10,7 @@ Em 15 de abril de 1912, durante sua viagem inaugural, o amplamente considerado �
 Embora houvesse algum elemento de sorte envolvido na sobrevivência, parece que alguns grupos de pessoas eram mais propensos a sobreviver do que outros. Neste desafio, pedimos que você construa um modelo preditivo que responda à pergunta: “que tipo de pessoa tem mais probabilidade de sobreviver?” usando dados de passageiros (ou seja, nome, idade, sexo, classe socioeconômica, etc).
 ###
 ## Proposta de Solução
-Aplicando técnicas, ferramentas e métodos que aprendi até aqui, sem 'espiar' nenhum código dos 'coleguinhas kagglers', utilizando a metodologia CRISP-DM desenvolvi um código de maneira limpa, modular e organizada que passou por todas as etapas que precedem o desenvolvimento de um modelo de maneira rápida e tão eficiente quanto se espera de um primeiro ciclo de desenvolvimento. Código este que está disponível neste ![LINK](https://github.com/rsantosluan/Titanic-MLDisaster/blob/master/notebooks/eda.ipynb).
+Aplicando técnicas, ferramentas e métodos que aprendi até aqui, sem 'espiar' nenhum código dos 'coleguinhas kagglers', utilizando a metodologia CRISP-DM desenvolvi um código de maneira limpa, modular e organizada que passou por todas as etapas que precedem o desenvolvimento de um modelo de maneira rápida e tão eficiente quanto se espera de um primeiro ciclo de desenvolvimento. Código este que está disponível neste [LINK](https://github.com/rsantosluan/Titanic-MLDisaster/blob/master/notebooks/eda.ipynb).
 ###
 ## Resultados obtidos
 Pós a etapa de exploração, criação de variáveis e afins, decidi testar os seguintes modelos:
@@ -21,7 +21,7 @@ Decidi utilizar este modelo, pois era abordado no capítulo, se mostrava eficien
 Após aplicar o que descobri com as análises de correlação que havia feito durante a EDA e o os resultados da ExtraTreesClassifier para definição de importância de features consegui refinar o ajuste dos hiperparâmetros, atingindo assim a **1938ª posição** com um score de **0.78468**.
 ###
 ## Considerações Finais
--Apesar de ser um conjunto de dados muito explorado, considero este um estudo extremamente valioso onde pude refinar técnicas e conhecer melhor parâmetros de um modelo que até então não havia despendido de muito tempo para explorar. Além de me colocar a prova comparando os resultados obtidos com desenvolvedores de todo mundo.
+- Apesar de ser um conjunto de dados muito explorado, considero este um estudo extremamente valioso onde pude refinar técnicas e conhecer melhor parâmetros de um modelo que até então não havia despendido de muito tempo para explorar. Além de me colocar a prova comparando os resultados obtidos com desenvolvedores de todo mundo.
 - Ainda não estou plenamente satisfeito com a posição ocupada nem com o score obtido e pretendo, em outro ciclo, testar outros modelos e técnicas para alcançar melhores resultados.
 
 ## Ferramentas utilizadas
