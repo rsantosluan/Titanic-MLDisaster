@@ -14,13 +14,13 @@ Aplicando técnicas, ferramentas e métodos que aprendi até aqui, sem 'espiar' 
 ###
 ## Resultados obtidos
 Pós a etapa de exploração, criação de variáveis e afins, decidi testar os seguintes modelos:
-- **Random Forest** 
-<p> Mesmo obtendo os melhores resultados nos testes com o conjunto de treino, ele se mostrou 'complexo demais' me rendendo apenas a **11473ª posição** com um score de **0.74162**. </p>
+- **Random Forest** </br>
+Mesmo obtendo os melhores resultados nos testes com o conjunto de treino, ele se mostrou 'complexo demais' me rendendo apenas a **11473ª posição** com um score de **0.74162**.
 - **Ridge Classifier** 
 DDecidi utilizar este modelo, pois era abordado no capítulo, se mostrava eficiente frente a conjuntos onde a maioria das características se mostram úteis e confesso nunca ter aprofundado meus estudos nele até então. Este modelo me rendeu a **3005ª posição**  com um score de **0.77990**.
 Após aplicar o que descobri com as análises de correlação que havia feito durante a EDA e o os resultados da ExtraTreesClassifier para definição de importância de features consegui refinar o ajuste dos hiperparâmetros, atingindo assim a **1938ª posição** com um score de **0.78468**.
 ###
-## Considerações Finais
+## Considerações Finais</br>
 -Apesar de ser um conjunto de dados muito explorado, considero este um estudo extremamente valioso onde pude refinar técnicas e conhecer melhor parâmetros de um modelo que até então não havia despendido de muito tempo para explorar. Além de me colocar a prova comparando os resultados obtidos com desenvolvedores de todo mundo.
 - Ainda não estou plenamente satisfeito com a posição ocupada nem com o score obtido e pretendo, em outro ciclo, testar outros modelos e técnicas para alcançar melhores resultados.
 
