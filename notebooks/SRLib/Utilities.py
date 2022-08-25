@@ -7,7 +7,7 @@ import pickle as pkl
 
 
 #Machine Learning
-from sklearn.linear_model    import RidgeClassifierCV, LogisticRegressionCV, LassoCV
+from sklearn.linear_model    import RidgeClassifierCV, LogisticRegressionCV
 from sklearn.ensemble        import RandomForestClassifier
 from sklearn.model_selection import cross_validate
 from sklearn.tree            import DecisionTreeClassifier
