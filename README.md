@@ -17,7 +17,7 @@ Pós a etapa de exploração, criação de variáveis e afins, decidi testar os 
 - **Random Forest** </br>
 Mesmo obtendo os melhores resultados nos testes com o conjunto de treino, ele se mostrou 'complexo demais' me rendendo apenas a **11473ª posição** com um score de **0.74162**.
 - **Ridge Classifier** </br>
-DDecidi utilizar este modelo, pois era abordado no capítulo, se mostrava eficiente frente a conjuntos onde a maioria das características se mostram úteis e confesso nunca ter aprofundado meus estudos nele até então. Este modelo me rendeu a **3005ª posição**  com um score de **0.77990**.
+Decidi utilizar este modelo, pois era abordado no capítulo, se mostrava eficiente frente a conjuntos onde a maioria das características se mostram úteis e confesso nunca ter aprofundado meus estudos nele até então. Este modelo me rendeu a **3005ª posição**  com um score de **0.77990**. </br>
 Após aplicar o que descobri com as análises de correlação que havia feito durante a EDA e o os resultados da ExtraTreesClassifier para definição de importância de features consegui refinar o ajuste dos hiperparâmetros, atingindo assim a **1938ª posição** com um score de **0.78468**.
 ###
 ## Considerações Finais
